@@ -1,0 +1,12 @@
+{
+    modes: {
+        powershell: {
+            name: "PowerShell",
+            highlighter: "ace/mode/powershell",
+            extensions: [
+                "ps1"
+            ],
+            completionTriggers: [".", "::"]
+        }
+    }
+}

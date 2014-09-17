@@ -1,0 +1,7 @@
+{
+    "name": "PowerShell Mode",
+    "uri": "gh:kpitt/powershell-mode",
+    "version": "0.1",
+    "description": "Windows PowerShell mode for Zed",
+    "files": []
+}
