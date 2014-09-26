@@ -4,7 +4,7 @@
             name: "PowerShell",
             highlighter: "ace/mode/powershell",
             extensions: [
-                "ps1"
+                "ps1", "psd1", "psm1"
             ],
             completionTriggers: [".", "::"]
         }
