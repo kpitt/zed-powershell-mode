@@ -6,7 +6,29 @@
             extensions: [
                 "ps1", "psd1", "psm1"
             ],
-            completionTriggers: [".", "::"]
+            completionTriggers: [".", "::"],
+            commands: {
+                "Tools:Complete:Snippet": {
+                    scriptUrl: "/default/command/snippet_completer.js",
+                    snippets: {
+                        foreach: "foreach (\\$${1:item} in ${2:\\$collection}) {\n\t${3}\n}",
+                        for: "for (\\$${1:i} = ${2:1}; \\$${1:i} -lt ${3:99}; \\$${1:i}++) {\n\t${4}\n}",
+                        fn: "function ${1:MyFunction} (${2:\\$param1, \\$param2}) {\n\t${3}\n}",
+                        param: "param (\n\t[${1:string}]\\$${2:Param1}\n)",
+                        par: "[${1:string}]\\$${2:Param}",
+                        pard: "[${1:string}]\\$${2:Param} = ${3:\"value\"}",
+                        parm: "[Parameter(Mandatory=\\$true)]\n[${1:string}]\\$${2:Param}",
+                        parr: "[${1:string}]\\$${2:Param} = \\$(throw \"${3:Parameter ${2:Param} is required.}\")",
+                        tryc: "try {\n\t${2}\n} catch [${1:Exception}] {\n}",
+                        trycf: "try {\n\t${2}\n} catch [${1:Exception}] {\n} finally {\n}"
+                    }
+                }
+            },
+            handlers: {
+                complete: [
+                    "Tools:Complete:Snippet"
+                ]
+            }
         },
         xml: {
             extensions: [
