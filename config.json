@@ -21,7 +21,8 @@
                         parr: "[${1:string}]\\$${2:Param} = \\$(throw \"${3:Parameter ${2:Param} is required.}\")",
                         tryc: "try {\n\t${2}\n} catch [${1:Exception}] {\n}",
                         trycf: "try {\n\t${2}\n} catch [${1:Exception}] {\n} finally {\n}"
-                    }
+                    },
+                    internal: true
                 }
             },
             handlers: {
