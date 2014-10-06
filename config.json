@@ -23,11 +23,61 @@
                         trycf: "try {\n\t${2}\n} catch [${1:Exception}] {\n} finally {\n}"
                     },
                     internal: true
+                },
+                "Tools:Complete:Builtin": {
+                    scriptUrl: "/default/command/builtin_completer.js",
+                    builtins: [
+                        "Get-ChildItem",
+                        "Add-Content",
+                        "Get-Content",
+                        "Set-Content",
+                        "Get-Credential",
+                        "Copy-Item",
+                        "Get-Item",
+                        "Move-Item",
+                        "New-Item",
+                        "Remove-Item",
+                        "Rename-Item",
+                        "Set-Item",
+                        "Group-Object",
+                        "New-Object",
+                        "Select-Object",
+                        "Sort-Object",
+                        "Where-Object",
+                        "Join-Path",
+                        "Split-Path",
+                        "Test-Path",
+                        "Get-Process",
+                        "Start-Process",
+                        "Stop-Process",
+                        "Wait-Process",
+                        "Add-Type",
+                        "Format-List",
+                        "Format-Table",
+                        "Format-Wide",
+                        "Invoke-Command",
+                        "Invoke-Item",
+                        "Out-File",
+                        "Out-GridView",
+                        "Out-Null",
+                        "Out-String",
+                        "Read-Host",
+                        "Select-String",
+                        "Write-Debug",
+                        "Write-Error",
+                        "Write-Host",
+                        "Write-Output",
+                        "Write-Progress",
+                        "Write-Verbose",
+                        "Write-Warning"
+                    ],
+                    internal: true
                 }
             },
             handlers: {
                 complete: [
-                    "Tools:Complete:Snippet"
+                    "Tools:Complete:Snippet",
+                    "Tools:Complete:Builtin"
                 ]
             }
         },
